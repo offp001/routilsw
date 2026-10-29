@@ -6,7 +6,6 @@
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('.nav');
   const screenshot = document.getElementById('readme-shot');
-  const year = document.getElementById('year');
   const latestUrl = 'https://api.github.com/repos/offp001/routils/releases/latest';
   const releasePage = 'https://github.com/offp001/routils/releases/latest';
   const downloadButton = document.getElementById('download-button');
@@ -47,7 +46,6 @@
     menuButton.setAttribute('aria-expanded', 'false');
     menuButton.textContent = '☰';
   }));
-  if (year) year.textContent = String(new Date().getFullYear());
   if (screenshot) screenshot.addEventListener('error', () => {
     screenshot.style.display = 'none';
     const fallback = screenshot.parentElement.querySelector('.shot-fallback');
